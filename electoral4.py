@@ -717,7 +717,7 @@ async def on_message(message):
         response = desa+desb+desc+desd+dese+desf+desg+desh
         await message.channel.send(response)
     if message.content=='code':
-        response = 'https://hawken-my.sharepoint.com/:w:/g/personal/23beraid_hawken_edu/Eb0Cc8xMpO1IthDDUQzd8TEB-GyzS4qFZD-5mt5tGo5kXQ?e=TRbdMF'
+        response = 'https://github.com/23beraid/electoralsystems/blob/hic/electoral4.py'
         await message.channel.send(response)
         
 client.run(TOKEN)
