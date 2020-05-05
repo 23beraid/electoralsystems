@@ -12,5 +12,5 @@ https://discordapp.com/api/oauth2/authorize?client_id=706898257435033752&permiss
 
 To get started using the bot, type `help`.   
 
-Check the notes page wiki for some explanations. 
+Check the notes page in the wiki for some explanations. 
 
