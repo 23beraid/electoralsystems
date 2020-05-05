@@ -669,7 +669,7 @@ for x in range(0, int(repeatnumber)):
 def finalResults():
     printlist=[]
     printlist.append('----------')
-    printlist.append("Hello. I'm SAMIRA. My job is showing artful mathematics involving real answers.")
+    printlist.append("Hello. I'm SAMIRA, your specialized automated mathematical internal research associate.")
     
     printlist.append('Total Results!')
     
