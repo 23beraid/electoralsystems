@@ -14,7 +14,7 @@ from dotenv import load_dotenv
 loop = asyncio.new_event_loop()
 asyncio.set_event_loop(asyncio.new_event_loop())
 load_dotenv()
-TOKEN = 'NzA2ODk4MjU3NDM1MDMzNzUy.XrBFAA.4otjRG0SpdrttPhyhpZqfzZ8hH4'
+TOKEN = 'NzA2ODk4MjU3NDM1MDMzNzUy.XrClzw.C5xzG00FunIHUaIXPSa-Rb-CZT8'
 GUILD = "Altair's Lair"
 #TOKEN = int(TOKEN)
 print(TOKEN)
@@ -273,7 +273,7 @@ def runElection():
                     if ans=="y":
                         test=True
                     if ans=="n":
-                        
+                        '''
                         m=0
                         tester=0
                         while tester==0:
@@ -282,11 +282,14 @@ def runElection():
                             else:
                                 tester=1
                         
-                        
-                        redistribute=lista[m]
-                        #lista.remove(lista[0])
+                        '''
+                        minvalue=min(lista)
+                        listpos=getIndexPositions(lista, minvalue)
+                        redistribute=lista[listpos[0]]
+                        del lista[listpos[0]]
+                        del genders[listpos[0]]
                         for x in range(0, redistribute):
-                            vote=random.randint(m+1,len(lista)-1)
+                            vote=random.randint(0,len(lista)-1)
                             lista[vote]+=1
             
                         males=[]
@@ -320,7 +323,7 @@ def runElection():
                                 males.append(lista[y])
                         
                         printlist.append("Votes Updated")
-                        lista[0]=0
+                        #lista[0]=0
                         printList(lista)
                         printlist.append("Males:")
                         printList(males)
@@ -399,7 +402,7 @@ def runElection():
                     if ans=="y":
                         test=True
                     if ans=="n":
-                        
+                        '''
                         m=0
                         tester=0
                         while tester==0:
@@ -407,12 +410,16 @@ def runElection():
                                 m+=1
                             else:
                                 tester=1
-                        
-                        
-                        redistribute=lista[m]
+                        '''
+                        minvalue=min(lista)
+                        listpos=getIndexPositions(lista, minvalue)
+                        redistribute=lista[listpos[0]]
+                        del lista[listpos[0]]
+                        del genders[listpos[0]]
+                        #redistribute=lista[m]
                         #lista.remove(lista[0])
                         for x in range(0, redistribute):
-                            vote=random.randint(m+1,len(lista)-1)
+                            vote=random.randint(0,len(lista)-1)
                             lista[vote]+=1
                         males=[]
                         females=[]
@@ -445,7 +452,7 @@ def runElection():
                                 males.append(lista[y])
                                 
                         printlist.append("Votes Updated")
-                        lista[0]=0
+                        #lista[0]=0
                         printList(lista)
                         printlist.append("Males")
                         printList(males)
@@ -567,6 +574,7 @@ def runElection():
                     quote+=1
                 else:
                     printlist.append("Fire Detected in the Stalemate Resolution Annex.")
+                '''
                 m=0
                 tester=0
                 while tester==0:
@@ -574,13 +582,26 @@ def runElection():
                         m+=1
                     else:
                         tester=1
-                        
-                redistribute=lista[m]
+                        minvalue=min(lista)
+                '''      
+                minvalue=min(lista)
+                listpos=getIndexPositions(lista, minvalue)
+                redistribute=lista[listpos[0]]
+                del lista[listpos[0]]
+                del genders[listpos[0]]
                 
                 for x in range(0, redistribute):
-                    vote=random.randint(m+1,len(lista)-1)
+                    '''
+                    tester=0
+                    while tester=0:
+                        vote=random.randint(0, len(lista)-1)
+                    if lista[vote]!=0:
+                        tester=1
+                    '''
+                    vote=random.randint(0, len(lista)-1)
                     lista[vote]+=1
-                lista[m]=0
+                #lista[listpos[0]]=0
+                #del lista[listpos[0]]
                 printlist.append("New Votes In.")
                 printList(lista)
                 #main()
