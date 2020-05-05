@@ -2,9 +2,11 @@
 
 HIC branch contains models for the HIC electoral system.  
 
-electoral4.py is the code used to run simulations using the discord bot. Discord bot is recommended.  
+electoral4.py is the code used to run simulations using the discord bot. 
 
 electoral3.py is the code used to run simulations using python.
+
+If you need me to turn on the bot, send me an email.  
 
 To add the discord bot to your server:  
 
