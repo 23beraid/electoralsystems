@@ -14,7 +14,7 @@ from dotenv import load_dotenv
 loop = asyncio.new_event_loop()
 asyncio.set_event_loop(asyncio.new_event_loop())
 load_dotenv()
-TOKEN = 'NzA2ODk4MjU3NDM1MDMzNzUy.XrClzw.C5xzG00FunIHUaIXPSa-Rb-CZT8'
+TOKEN = 'REDACTED'
 GUILD = "Altair's Lair"
 #TOKEN = int(TOKEN)
 print(TOKEN)
@@ -63,7 +63,7 @@ def clearStats():
 clearStats()
 
 def runElection():
-    
+    printlist=[]
     def printList(list):
         for x in range(0, len(list)):
             printlist.append(list[x])
@@ -316,7 +316,7 @@ def runElection():
                         else:
                             males.append(lista[5])  
                         '''
-                        for y in range(m+1, len(genders)):
+                        for y in range(0, len(genders)):
                             if genders[y]==0:
                                 females.append(lista[y])
                             else:
@@ -445,7 +445,7 @@ def runElection():
                         else:
                             males.append(lista[5])  
                         '''    
-                        for y in range(m+1, len(genders)):
+                        for y in range(0, len(genders)):
                             if genders[y]==0:
                                 females.append(lista[y])
                             else:
@@ -674,7 +674,7 @@ def runElection():
                 excessvotes=max(females)-averagefemale
                 #print(excessvotes)
                 
-    wastedvotes+=excessvotes
+    #wastedvotes+=excessvotes
     printlist.append("Wasted Votes " + str(wastedvotes))
     totalwastevotes+=wastedvotes
     printlist.append('----------')
